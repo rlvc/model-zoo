@@ -8,8 +8,8 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # UTC time 22:30
-    # Wednesday and Saturday
-    - cron: '30 22 * * 3,6'
+    # Saturday
+    - cron: '30 22 * * 6'
   workflow_dispatch:
     inputs:
       cases:

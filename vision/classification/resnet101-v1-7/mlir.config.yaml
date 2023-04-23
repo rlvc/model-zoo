@@ -60,8 +60,8 @@ BM1684X:
   dataset:
     image_path: $(imagenet2012_val_set)
     image_label: $(imagenet2012_caffe_val_ground_truth)
-    mean: [123.67, 116.2, 103.53]
-    scale: [0.017, 0.017, 0.017]
+    mean: [123.675, 116.28, 103.53]
+    scale: [0.0171, 0.0175, 0.0174]
     resize_dims: 256
     size: 224
     trans: True
