@@ -51,8 +51,10 @@ python3 .github/workflows/check.py
 |:-                               |:-                                                                                                    |:-                  |:-                  |
 |alexnet                          |[vision/classification/AlexNet-Caffe](vision/classification/AlexNet-Caffe)                            |:white\_check\_mark:|                    |
 |arcface                          |[vision/recognition/arcface](vision/recognition/arcface)                                              |                    |:white\_check\_mark:|
+|big\_transfer                    |[vision/classification/big\_transfer\_mlir](vision/classification/big_transfer_mlir)                  |                    |:white\_check\_mark:|
 |c3d                              |[vision/video-recognition/C3D](vision/video-recognition/C3D)                                          |:white\_check\_mark:|                    |
 |CenterNet                        |[vision/detection/CenterNet-Torch](vision/detection/CenterNet-Torch)                                  |:white\_check\_mark:|                    |
+|clip                             |[vision/classification/clip-mlir](vision/classification/clip-mlir)                                    |                    |:white\_check\_mark:|
 |CRNN                             |[vision/OCR/CRNN](vision/OCR/CRNN)                                                                    |:white\_check\_mark:|                    |
 |cyclegan\_horse2zebra            |[vision/GAN/cyclegan](vision/GAN/cyclegan)                                                            |:white\_check\_mark:|                    |
 |DBNet\_totaltext\_res18\_dcn     |[vision/OCR/DBNet](vision/OCR/DBNet)                                                                  |:white\_check\_mark:|                    |
@@ -142,6 +144,7 @@ python3 .github/workflows/check.py
 |tpu-mlir\_S-DCNet\_SHB           |[vision/visual-counting/S-DCNet](vision/visual-counting/S-DCNet)                                      |                    |:white\_check\_mark:|
 |tpu-mlir\_yoloface               |[vision/detection/yoloface](vision/detection/yoloface)                                                |                    |:white\_check\_mark:|
 |tsm                              |[vision/recognition/tsm](vision/recognition/tsm)                                                      |                    |:white\_check\_mark:|
+|TSN                              |[vision/video-recognition/TSN](vision/video-recognition/TSN/)                                         |                    |:white\_check\_mark:|
 |ultralytics\_yolov3              |[vision/detection/ultralytics-yolov3](vision/detection/ultralytics-yolov3)                            |:white\_check\_mark:|                    |
 |unet\_plusplus                   |[vision/segmentation/unet\_plusplus](vision/segmentation/unet_plusplus)                               |:white\_check\_mark:|:white\_check\_mark:|
 |VDSR                             |[vision/super-resolution/VDSR](vision/super-resolution/VDSR)                                          |:white\_check\_mark:|                    |
@@ -150,6 +153,8 @@ python3 .github/workflows/check.py
 |vgg19                            |[vision/classification/vgg19](vision/classification/vgg19)                                            |:white\_check\_mark:|                    |
 |vggssd\_300                      |[vision/detection/vggssd\_300](vision/detection/vggssd_300)                                           |:white\_check\_mark:|                    |
 |vision\_OCR\_CRNN\_tpu-mlir      |[vision/OCR/CRNN](vision/OCR/CRNN)                                                                    |                    |:white\_check\_mark:|
+|vit-base-patch16-384             |[vision/classification/vit_B_16](vision/classification/vit_B_16)                                      |:white\_check\_mark:|                    |
+|vit-large-patch16-384            |[vision/classification/vit_L_16](vision/classification/vit_L_16)                                      |:white\_check\_mark:|                    |
 |WRN-50-2                         |[vision/classification/WRN-50-2](vision/classification/WRN-50-2)                                      |:white\_check\_mark:|:white\_check\_mark:|
 |wrn50                            |[vision/classification/wrn50](vision/classification/wrn50)                                            |:white\_check\_mark:|:white\_check\_mark:|
 |xception                         |[vision/classification/xception](vision/classification/xception)                                      |:white\_check\_mark:|                    |

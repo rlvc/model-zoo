@@ -105,4 +105,9 @@ vision/detection/lprnet
 vision/recognition/tsm
 language/nlp/Huggingface_bert_squadv1
 vision/classification/resnet50-v1.5
+vision/classification/big_transfer_mlir
+vision/classification/vit_B_16
+vision/classification/vit_L_16
+vision/classification/clip-mlir
+vision/video-recognition/TSN
 vision/segmentation/SegFormer
