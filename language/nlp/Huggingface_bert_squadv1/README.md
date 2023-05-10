@@ -7,12 +7,14 @@ Bert-large-squad from Hugging Face Transformers community.
 
 ## Model
 
-| Model                       | Download                              | Shape                    |
-|-----------------------------|:--------------------------------------|:-------------------------|
-| bert_base_traced-2.11.0.pt  | [436 MB](bert_base_traced-2.11.0.pt)  | (1,384),(1,384),(1,384)  |
-| bert_large_traced-2.11.0.pt | [1.3 GB](bert_large_traced-2.11.0.pt) | (1,384),(1,384),(1,384)  |
-| bert_base_traced-4.23.0.pt  | [436 MB](bert_base_traced-4.23.0.pt)  | (1,384),(1,384),(1,384)  |
-| bert_large_traced-4.23.0.pt | [1.3 GB](bert_large_traced-4.23.0.pt) | (1,384),(1,384),(1,384)  |
+| Model                               | Download                                      | Shape                   |
+| ----------------------------------- | :-------------------------------------------- | :---------------------- |
+| bert_base_traced-2.11.0.pt          | [436 MB](bert_base_traced-2.11.0.pt)          | (1,384),(1,384),(1,384) |
+| bert_large_traced-2.11.0.pt         | [1.3 GB](bert_large_traced-2.11.0.pt)         | (1,384),(1,384),(1,384) |
+| bert_base_traced-4.23.0.pt          | [436 MB](bert_base_traced-4.23.0.pt)          | (1,384),(1,384),(1,384) |
+| bert_large_traced-4.23.0.pt         | [1.3 GB](bert_large_traced-4.23.0.pt)         | (1,384),(1,384),(1,384) |
+| bert_base_squad_uncased-2.11.0.onnx | [416 MB](bert_base_squad_uncased-2.11.0.onnx) | (1,384),(1,384),(1,384) |
+| bert_base_squad_uncased-4.23.0.onnx | [416 MB](bert_base_squad_uncased-4.23.0.onnx) | (1,384),(1,384),(1,384) |
 
 ## Dataset
 

@@ -1,0 +1,28 @@
+# genetated time: 2023-05-09 16:15:42.028550
+# sample number: 10
+# chip: bm1684x  mix_mode: F16
+# number of F16 layer: 6
+### 123 FAILED
+# op_name   quantize_mode
+/bert/encoder/layer.0/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.0/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.1/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.1/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.2/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.2/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.3/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.3/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.4/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.4/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.5/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.5/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.6/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.6/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.7/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.7/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.8/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.8/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.9/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.9/intermediate/dense/Add_output_0_Add F16
+/bert/encoder/layer.10/attention/self/Add_output_0_Add F16
+/bert/encoder/layer.10/intermediate/dense/Add_output_0_Add F16

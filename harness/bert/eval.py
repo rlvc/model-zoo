@@ -361,7 +361,7 @@ def evaluator(args, results):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--vocab_file", default="./vocab.txt", help="Path to vocab.txt")
-    parser.add_argument("--val_data", default="../../dataset/squad/dev-v1.1.json", help="Path to validation data")
+    parser.add_argument("--val_data", default="../../dataset/SQuAD/val/dev-v1.1.json", help="Path to validation data")
     parser.add_argument("--log_file", default="./logs/mlperf_log_accuracy.json", help="Path to LoadGen accuracy log")
     parser.add_argument("--out_file", default="./result/predictions.json", help="Path to output predictions file")
     parser.add_argument("--features_cache_file", default="eval_features.pickle", help="Path to features' cache file")
