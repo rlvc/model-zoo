@@ -4,6 +4,7 @@ name: yolov3_608
 gops: 131.196
 
 time: true
+runtime_cmp: false
 
 model: $(home)/yolov3.cfg
 weight: $(home)/yolov3-608.weights
