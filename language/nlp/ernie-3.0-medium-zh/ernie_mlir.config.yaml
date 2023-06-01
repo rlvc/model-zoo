@@ -1,0 +1,72 @@
+---
+
+name: ernie-3.0-medium-zh
+
+gops: [11.216422932]
+
+shapes:
+  - [[1, 128], [1, 128]]
+
+model: $(home)/ernie-3.0-medium-zh.onnx
+
+precision: true
+
+mlir_transform:
+  model_transform.py
+    --model_name $(name)
+    --model_def $(model)
+    --test_input $(CAIL2019_divorce_cali_set)/0.npz
+    --input_shapes [$(shape_param)]
+    --output_names linear_75.tmp_1
+    --input_types int64
+    --channel_format none
+    --test_result $(workdir)/$(name)_top_outputs.npz
+    --mlir $(workdir)/transformed.mlir
+
+  # run_qtable.py $(workdir)/transformed.mlir
+  #   --dataset $(CAIL2019_divorce_cali_set)
+  #   --calibration_table $(workdir)/$(name).cali_table
+  #   --chip bm1684x
+  #   --min_layer_cos 0.999
+  #   --expected_cos 0.9999
+  #   --input_num 10
+  #   -o $(workdir)/$(name).qtable
+
+mlir_calibration:
+  run_calibration.py $(workdir)/transformed.mlir
+    --dataset $(CAIL2019_divorce_cali_set)
+    --input_num 20
+    -o $(workdir)/$(name).cali_table
+
+BM1684X:
+  deploy:
+    - model_deploy.py  --mlir $(workdir)/transformed.mlir
+        --quantize F32
+        --chip $(target)
+        --test_input $(workdir)/$(name)_in_f32.npz
+        --test_reference $(workdir)/$(name)_top_outputs.npz
+        --tolerance 0.99,0.99
+        --model $(workdir)/$(name)_bm1684x_f32.bmodel
+    - model_deploy.py --mlir $(workdir)/transformed.mlir
+        --asymmetric
+        --quantize INT8
+        --calibration_table $(workdir)/$(name).cali_table
+        --quantize_table $(home)/ernie-3.0-medium-zh.qtable
+        --chip $(target)
+        --model $(workdir)/$(name)_bm1684x_int8_asym.bmodel
+        --tolerance 0.8,0.5
+        --test_input $(workdir)/$(name)_in_f32.npz
+        --test_reference $(workdir)/$(name)_top_outputs.npz
+
+  dataset:
+    tokenizer_name: "ernie-3.0-medium-zh"
+    label_file: $(CAIL2019_divorce_label_set)
+    dev_file: $(CAIL2019_divorce_val_set)
+
+  harness:
+    type: f1_score
+    args:
+      - name: FP32
+        bmodel: $(workdir)/$(name)_bm1684x_f32.bmodel
+      - name: INT8-asym
+        bmodel: $(workdir)/$(name)_bm1684x_int8_asym.bmodel
